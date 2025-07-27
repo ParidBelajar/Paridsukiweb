@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Parid - Web Personal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <video autoplay muted loop id="bg-video">
+    <source src="assets/video.mp4" type="video/mp4" />
+    Browser tidak mendukung video.
+  </video>
+
+  <!-- Splash Intro -->
+  <div class="splash" id="splash">
+    <h1 class="animate-fade">Selamat Datang di Dunia Parid</h1>
+    <p class="animate-slide">Explore otomasi, kreativitas & teknologi</p>
+    <button onclick="showHome()" class="animate-btn">Masuk ke Web</button>
+  </div>
+
+  <!-- Menu Utama -->
+  <div class="home container" id="home" style="display:none;">
+    <h1 class="animate-fade">Halo, saya <span class="highlight">Parid</span></h1>
+    <p class="animate-slide">Developer bot WhatsApp & penjelajah sistem otomatis</p>
+    <div class="buttons">
+      <button onclick="showSection('perkenalan')" class="animate-btn">Perkenalan</button>
+      <button onclick="showSection('produk')" class="animate-btn">All Produk</button>
+    </div>
+    <audio controls>
+      <source src="assets/lagu.mp3" type="audio/mpeg" />
+      Browser tidak mendukung audio.
+    </audio>
+  </div>
+
+  <!-- Perkenalan -->
+  <div class="container animate-fade" id="perkenalan" style="display:none;">
+    <img src="assets/foto.jpg" alt="Foto Parid" class="profile" />
+    <h2>Kenalin Saya Parid</h2>
+    <p>Bot developer, penggila sistem otomatis, dan penyuka eksperimen digital.</p>
+    <p>Dari hobi ngulik jadi profesi. Sekarang bantu orang pakai tools canggih.</p>
+    <button onclick="showHome()" class="back-btn">← Kembali</button>
+  </div>
+
+  <!-- Produk -->
+  <div class="container animate-slide" id="produk" style="display:none;">
+    <h2>Produk & Layanan</h2>
+    <ul>
+      <li>🤖 Panel Bot WhatsApp Premium</li>
+      <li>💼  Admin panel & Reseller</li>
+    </ul>
+    <button onclick="showHome()" class="back-btn">← Kembali</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
